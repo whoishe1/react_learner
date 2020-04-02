@@ -5,6 +5,7 @@ import ShoppingList from "./components/ShoppingList";
 import Books from "./components/Books";
 import Home from "./components/Home";
 import NotFound from "./components/NotFound";
+import Users from "./components/Users";
 import { AppBar, Tabs, Tab } from "@material-ui/core";
 
 const styles = {
@@ -50,12 +51,19 @@ export default class App extends Component {
                 component={Link}
                 value={this.state.value}
               />
+              <Tab
+                label="Final Assignment"
+                to="/final"
+                component={Link}
+                value={this.state.value}
+              />
             </Tabs>
           </AppBar>
           <Switch>
             <Route path="/" component={Home} exact />
             <Route path="/shoppinglist" component={ShoppingList} />
             <Route path="/books" component={Books} />
+            <Route path="/final" component={Users} />
             <Route component={NotFound} />
           </Switch>
         </div>
